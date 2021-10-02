@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import './index.css';
 import App from './App';
 import { createGlobalStyle } from 'styled-components';
 
@@ -10,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100vh;
 
     background-color:white;
+    font-family: 'Roboto Condensed', sans-serif;
   }
   
 `;

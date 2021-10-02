@@ -1,5 +1,5 @@
 
-import Profile from './components/profile';
+import Andre from './components/Andre';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -16,7 +16,7 @@ const Container = styled.div`
 function App() {
   return (
     <Container className="App">
-      <Profile />
+      <Andre />
     </Container>
   );
 }
