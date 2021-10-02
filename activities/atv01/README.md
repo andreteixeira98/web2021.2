@@ -45,7 +45,7 @@
     first Activity of the web course 2021.2
     </p>
 
-<h2 align="left"><a href="https://github.com/andreteixeira98/web2021.2/tree/main/activities/atv01">Link Project</a></h2>
+<h2 align="left"><a href="https://github.com/andreteixeira98/web2021.2/tree/main/activities/atv01">Project Link</a></h2>
 
 
 
