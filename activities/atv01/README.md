@@ -89,11 +89,11 @@ Technologies used to create the project
 
 1. Run project
   ```sh
-  yarn dev
+  yarn start
 
   #or
 
-  npm run dev
+  npm run start
   ```
 2. Visit http://localhost:3000 to view your application.
 
