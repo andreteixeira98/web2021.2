@@ -10,7 +10,7 @@
 
 <!-- PROJECT LOGO -->
 
-
+<img src="/.github/images/Screenshot-atv01.png" alt='home'/>
 
 
 <!-- TABLE OF CONTENTS -->
@@ -45,9 +45,8 @@
     first Activity of the web course 2021.2
     </p>
 
-<h2 align="center"><a href="https://github.com/andreteixeira98/web2021.2/tree/main/activities/atv01">Link Project</a></h2>
+<h2 align="left"><a href="https://github.com/andreteixeira98/web2021.2/tree/main/activities/atv01">Link Project</a></h2>
 
-<img src="/.github/images/Screenshot-atv01.png" alt='home'/>
 
 
 ### Built With
