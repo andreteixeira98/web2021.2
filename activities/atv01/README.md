@@ -47,7 +47,8 @@
 
 <h2 align="center"><a href="https://github.com/andreteixeira98/web2021.2/tree/main/activities/atv01">Link Project</a></h2>
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/andreteixeira98/web2021.2/tree/main/activities/atv01)
+<img src="/.github/images/Screenshot-atv01.png" alt='home'/>
+
 
 ### Built With
 Technologies used to create the project
@@ -128,4 +129,3 @@ André Teixeira - [Facebook](https://www.facebook.com/andreteixeiravaz) - andret
 [license-url]: https://github.com/andreteixeira98/web2021.2/blob/main/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/andre-teixeira-83a822186
-[product-screenshot]:/.github/images/Screenshot-atv01.png
