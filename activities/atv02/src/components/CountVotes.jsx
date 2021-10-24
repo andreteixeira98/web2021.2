@@ -38,20 +38,27 @@ function CountVotes() {
     const [maior, setMaior] = useState(null);
     const [menor, setMenor] = useState(null);
 
-    useEffect(() => {
-        if (fortaleza > quixada && fortaleza > limoeiroDoNorte && fortaleza > juazeiro) {
-            setMaior(`Fortaleza`);
-        } else if (quixada > fortaleza && quixada > limoeiroDoNorte && quixada > juazeiro) {
-            setMaior(`Quixadá`);
+    function maisVotada() {
+        if (fortaleza === quixada === limoeiroDoNorte === juazeiro) {
+            return (`Fortaleza, Quixadá, Limoeiro, Juazeiro`);
+        } else if (fortaleza === quixada && quixada > limoeiroDoNorte && quixada > juazeiro) {
+            return (`Quixadá`);
 
         } else if (limoeiroDoNorte > fortaleza && limoeiroDoNorte > quixada && limoeiroDoNorte > juazeiro) {
-            setMaior(`Limoeiro`);
+            return (`Limoeiro`);
 
         } else if (juazeiro > fortaleza && juazeiro > quixada && juazeiro > limoeiroDoNorte) {
-            setMaior('Juazeiro');
+            return ('Juazeiro');
         } else {
-            setMaior('empate');
+            return ('empate');
         }
+    }
+    function menosVotada() {
+
+    }
+
+    useEffect(() => {
+
     }, [fortaleza, quixada, limoeiroDoNorte, juazeiro]);
 
     return (
