@@ -37,27 +37,212 @@ function CountVotes() {
 
     const [maior, setMaior] = useState(null);
     const [menor, setMenor] = useState(null);
+    
 
     function maisVotada() {
-        if (fortaleza === quixada === limoeiroDoNorte === juazeiro) {
-            return (`Fortaleza, Quixadá, Limoeiro, Juazeiro`);
-        } else if (fortaleza === quixada && quixada > limoeiroDoNorte && quixada > juazeiro) {
-            return (`Quixadá`);
+        if (fortaleza === quixada && fortaleza === limoeiroDoNorte && fortaleza === juazeiro) {
+            setMaior(`Fortaleza, Quixadá, Limoeiro, Juazeiro`);
+        } 
+        else if(fortaleza === quixada && fortaleza === juazeiro){
+            if(fortaleza > limoeiroDoNorte){
+                setMaior('Fortaleza, Quixadá, Juazeiro');
+            }else {
+                setMaior('Limoeiro');
+            }
+        }else if(fortaleza === quixada && fortaleza === limoeiroDoNorte){
+            if(fortaleza > juazeiro){
+                setMaior('Fortaleza, Quixadá, Limoeiro');
+            }else{
+                setMaior('Juazeiro');
+            }
+        }
+        else if(quixada === juazeiro && quixada === limoeiroDoNorte){
+            if(quixada > fortaleza){
+                setMaior('Quixadá, Limoeiro, Juazeiro');
+            }else{
+                setMaior('Fortaleza');
+            }
+        }
+        else if(fortaleza === juazeiro && fortaleza === limoeiroDoNorte){
+            if(fortaleza > quixada){
+                setMaior('Fortaleza, Limoeiro, Juazeiro');
+            }else{
+                setMaior('Quixada');
+            }
+        }
+
+        else if(fortaleza === quixada){
+            if(fortaleza > juazeiro && fortaleza > limoeiroDoNorte){
+                setMaior('Fortaleza, Quixadá');
+            }else if(juazeiro > limoeiroDoNorte){
+                setMaior('Juazeiro');
+            }else {
+                setMaior('Limoeiro');
+            }
+        }
+        else if(fortaleza === juazeiro){
+            if(fortaleza > quixada && fortaleza > limoeiroDoNorte){
+                setMaior('Fortaleza, Juazeiro');
+            }else if(quixada > limoeiroDoNorte){
+                setMaior('Quixadá');
+            }else {
+                setMaior('Limoeiro');
+            }
+        }
+        else if(fortaleza === limoeiroDoNorte){
+            if(fortaleza > quixada && fortaleza > juazeiro){
+                setMaior('Fortaleza, Limoeiro');
+            }else if(quixada > juazeiro){
+                setMaior('Quixadá');
+            }else {
+                setMaior('Juazeiro');
+            }
+        }
+        else if(quixada === limoeiroDoNorte){
+            if(quixada > fortaleza && quixada > juazeiro){
+                setMaior('Quixadá, Limoeiro');
+            }else if(fortaleza > juazeiro){
+                setMaior('Fortaleza');
+            }else {
+                setMaior('Juazeiro');
+            }
+        }
+        else if(quixada === juazeiro){
+            if(quixada > fortaleza && quixada > limoeiroDoNorte){
+                setMaior('Quixadá, Juazeiro');
+            }else if(fortaleza > limoeiroDoNorte){
+                setMaior('Fortaleza');
+            }else {
+                setMaior('Limoeiro');
+            }
+        }
+        else if( juazeiro === limoeiroDoNorte){
+            if(juazeiro > fortaleza && juazeiro > quixada){
+                setMaior('Juazeiro, Limoeiro');
+            }else if(fortaleza > quixada){
+                setMaior('Fortaleza');
+            }else {
+                setMaior('Quixadá');
+            }
+        }
+        else if (fortaleza >quixada && fortaleza > limoeiroDoNorte && fortaleza > juazeiro) {
+            setMaior(`Fortaleza`);
 
         } else if (limoeiroDoNorte > fortaleza && limoeiroDoNorte > quixada && limoeiroDoNorte > juazeiro) {
-            return (`Limoeiro`);
+            setMaior(`Limoeiro`);
 
         } else if (juazeiro > fortaleza && juazeiro > quixada && juazeiro > limoeiroDoNorte) {
-            return ('Juazeiro');
+            setMaior('Juazeiro');
         } else {
-            return ('empate');
+            setMaior('Quixadá');
         }
     }
-    function menosVotada() {
 
+    function menosVotada() {
+        if (fortaleza === quixada && fortaleza === limoeiroDoNorte && fortaleza === juazeiro) {
+            setMaior(`Fortaleza, Quixadá, Limoeiro, Juazeiro`);
+        } 
+        else if(fortaleza === quixada && fortaleza === juazeiro){
+            if(fortaleza > limoeiroDoNorte){
+                setMenor('Fortaleza, Quixadá, Juazeiro');
+            }else {
+                setMenor('Limoeiro');
+            }
+        }else if(fortaleza === quixada && fortaleza === limoeiroDoNorte){
+            if(fortaleza < juazeiro){
+                setMenor('Fortaleza, Quixadá, Limoeiro');
+            }else{
+                setMenor('Juazeiro');
+            }
+        }
+        else if(quixada === juazeiro && quixada === limoeiroDoNorte){
+            if(quixada < fortaleza){
+                setMenor('Quixadá, Limoeiro, Juazeiro');
+            }else{
+                setMenor('Fortaleza');
+            }
+        }
+        else if(fortaleza === juazeiro && fortaleza === limoeiroDoNorte){
+            if(fortaleza < quixada){
+                setMenor('Fortaleza, Limoeiro, Juazeiro');
+            }else{
+                setMenor('Quixada');
+            }
+        }
+
+        else if(fortaleza === quixada){
+            if(fortaleza < juazeiro && fortaleza < limoeiroDoNorte){
+                setMenor('Fortaleza, Quixadá');
+            }else if(juazeiro < limoeiroDoNorte){
+                setMenor('Juazeiro');
+            }else {
+                setMenor('Limoeiro');
+            }
+        }
+        else if(fortaleza === juazeiro){
+            if(fortaleza < quixada && fortaleza < limoeiroDoNorte){
+                setMenor('Fortaleza, Juazeiro');
+            }else if(quixada < limoeiroDoNorte){
+                setMenor('Quixadá');
+            }else {
+                setMenor('Limoeiro');
+            }
+        }
+        else if(fortaleza === limoeiroDoNorte){
+            if(fortaleza < quixada && fortaleza < juazeiro){
+                setMenor('Fortaleza, Limoeiro');
+            }else if(quixada < juazeiro){
+                setMenor('Quixadá');
+            }else {
+                setMenor('Juazeiro');
+            }
+        }
+        else if(quixada === limoeiroDoNorte){
+            if(quixada < fortaleza && quixada < juazeiro){
+                setMenor('Quixadá, Limoeiro');
+            }else if(fortaleza < juazeiro){
+                setMenor('Fortaleza');
+            }else {
+                setMenor('Juazeiro');
+            }
+        }
+        else if(quixada === juazeiro){
+            if(quixada < fortaleza && quixada < limoeiroDoNorte){
+                setMenor('Quixadá, Juazeiro');
+            }else if(fortaleza < limoeiroDoNorte){
+                setMenor('Fortaleza');
+            }else {
+                setMenor('Limoeiro');
+            }
+        }
+        else if( juazeiro === limoeiroDoNorte){
+            if(juazeiro < fortaleza && juazeiro < quixada){
+                setMenor('Juazeiro, Limoeiro');
+            }else if(fortaleza < quixada){
+                setMenor('Fortaleza');
+            }else {
+                setMenor('Quixadá');
+            }
+        }
+
+
+
+        else if (fortaleza <quixada && fortaleza < limoeiroDoNorte && fortaleza < juazeiro) {
+            setMenor(`Fortaleza`);
+
+        } else if (limoeiroDoNorte < fortaleza && limoeiroDoNorte < quixada && limoeiroDoNorte < juazeiro) {
+            setMenor(`Limoeiro`);
+
+        } else if (juazeiro < fortaleza && juazeiro < quixada && juazeiro < limoeiroDoNorte) {
+            setMenor('Juazeiro');
+        } else {
+            setMenor('Quixadá');
+        }
     }
 
     useEffect(() => {
+        maisVotada();
+        menosVotada();
 
     }, [fortaleza, quixada, limoeiroDoNorte, juazeiro]);
 
@@ -73,7 +258,7 @@ function CountVotes() {
 
             <ul className='plus_and_less'>
                 <li>MAIS VOTADA(s): {maior}</li>
-                <li>MENOS VOTADA(s): juazeiro</li>
+                <li>MENOS VOTADA(s): {menor}</li>
             </ul>
 
             <div className='city_counter'>
